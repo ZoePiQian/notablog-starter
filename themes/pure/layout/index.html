@@ -16,16 +16,13 @@
   {{/if}}
   <meta property="og:type" content="blog">
   <title>{{siteMeta.title}}</title>
-  <!-- Favicon -->
-  {{if(options.siteMeta.icon)}}
-  <link rel="shortcut icon" href="{{siteMeta.icon}}">
-  {{/if}}
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
   <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
   <link rel="stylesheet" type="text/css" href="css/theme.css">
   <link rel="stylesheet" type="text/css" href="css/notablog.css">
+    <link rel="icon" href="https://www.canva.cn/design/DAEjZM4WlGk/view">
   <style>
     :root {
       font-size: 20px;
@@ -35,17 +32,27 @@
 
 <body>
   <nav class="Navbar">
-    <a href="index.html">
-      <div class="Navbar__Btn">{{siteMeta.iconHTML}} <span>Home</span></div>
-    </a>
     {{each(options.siteMeta.pages)}}
     {{if(@this.publish && @this.inMenu)}}
-    <span class="Navbar__Delim">&centerdot;</span>
-    <a href="{{@this.url}}">
-      <div class="Navbar__Btn">{{@this.iconHTML}} <span>{{@this.title}}</span></div>
-    </a>
+      {{if(@this.url!="blog.html")}}
+      <a href="{{@this.url}}">
+        <div class="Navbar__Btn">{{@this.iconHTML}} <span>{{@this.title}}</span></div>
+      </a>
+      {{#else}}
+      <a href="/">
+        <div class="Navbar__Btn">{{@this.iconHTML}} <span>{{@this.title}}</span></div>
+      </a>
+      {{/if}}
     {{/if}}
     {{/each}}
+    <span class="Navbar__Delim">&centerdot;</span>
+    <a href="https://if.zoepi.online">
+      <div class="Navbar__Btn"> ❤️ <span style="margin-left: 6px;">Newsletter</span></div>
+    </a>
+    <span class="Navbar__Delim">&centerdot;</span>
+    <a href="blog.html">
+      <div class="Navbar__Btn">{{siteMeta.iconHTML}} <span>Blog</span></div>
+    </a>
   </nav>
   <header class="Header">
     {{if(options.siteMeta.cover)}}
@@ -58,7 +65,7 @@
     {{if(options.siteMeta.icon)}}
     <div class="Header__Icon">{{siteMeta.iconHTML}}</div>
     {{/if}}
-    <h1 class="Header__Title">{{siteMeta.title}}</h1>
+    <h1 class="Header__Title">Blog</h1>
     {{if(options.siteMeta.description)}}
     <div class="Header__Desc">
       <span class="Header__DescBigQuoteMark">&ldquo;</span>
@@ -69,7 +76,7 @@
   </header>
   <article class="ArticleList">
       {{each(options.siteMeta.pages)}}
-      {{if(@this.publish && @this.inList)}}
+      {{if(@this.publish && @this.inList && @this.url!="blog.html")}}
     <article class="Article">
       <h3 class="Article__Title">
             {{@this.iconHTML}}
@@ -97,10 +104,10 @@
       {{/each}}
   </article>
   <footer class="Footer">
-        <div>&copy; {{siteMeta.title}} 2019</div>
+        <div>&copy; {{siteMeta.title}} 2021</div>
         <div>&centerdot;</div>
-        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
-            rel="noopener noreferrer">Notablog</a>.
+        <div>Powered by <a href="https://juicing.cn" target="_blank"
+            rel="noopener noreferrer"> Zoe Pi </a>.
         </div>
     </footer>
 </body>

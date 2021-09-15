@@ -16,16 +16,13 @@
   {{/if}}
   <meta property="og:type" content="blog">
   <title>{{post.title}}</title>
-  <!-- Favicon -->
-  {{if(options.siteMeta.icon)}}
-  <link rel="shortcut icon" href="{{siteMeta.icon}}">
-  {{/if}}
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
   <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
   <link rel="stylesheet" type="text/css" href="css/notablog.css">
   <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/rocket_1f680.png">
   <style>
     :root {
       font-size: 18px;
@@ -39,17 +36,27 @@
 
 <body>
   <nav class="Navbar">
-    <a href="index.html">
-      <div class="Navbar__Btn">{{siteMeta.iconHTML}} <span>Home</span></div>
-    </a>
     {{each(options.siteMeta.pages)}}
     {{if(@this.publish && @this.inMenu)}}
-    <span class="Navbar__Delim">&centerdot;</span>
-    <a href="{{@this.url}}">
-      <div class="Navbar__Btn">{{@this.iconHTML}} <span>{{@this.title}}</span></div>
-    </a>
+      {{if(@this.url!="blog.html")}}
+      <a href="{{@this.url}}">
+        <div class="Navbar__Btn">{{@this.iconHTML}} <span>{{@this.title}}</span></div>
+      </a>
+      {{#else}}
+      <a href="/">
+        <div class="Navbar__Btn">{{@this.iconHTML}} <span>{{@this.title}}</span></div>
+      </a>
+      {{/if}}
     {{/if}}
     {{/each}}
+    <span class="Navbar__Delim">&centerdot;</span>
+    <a href="https://if.zoepi.online">
+      <div class="Navbar__Btn"> ❤️ <span style="margin-left: 6px;">Newsletter</span></div>
+    </a>
+    <span class="Navbar__Delim">&centerdot;</span>
+    <a href="blog.html">
+      <div class="Navbar__Btn">{{siteMeta.iconHTML}} <span>Blog</span></div>
+    </a>
   </nav>
   <header class="Header">
       {{if(options.post.cover)}}
@@ -77,11 +84,40 @@
         {{/if}}
   </header>
       {{post.contentHTML}}
-  <footer class="Footer">
-        <div>&copy; {{siteMeta.title}} 2019</div>
+      {{if(options.post.url!=="blog.html")}}
+        <div id="disqus_thread" class="PageRoot" style="padding-top: 30px;"></div>
+        <script>
+          var disqus_config = function () {
+              // Replace PAGE_URL with your page's canonical URL variable
+              this.page.url = window.location.href;  
+              
+              // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              this.page.identifier = "{{post.id}}"; 
+          };
+          
+          (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+              var d = document, s = d.createElement('script');
+              
+              // IMPORTANT: Replace EXAMPLE with your forum shortname!
+              s.src = 'https://costahuang.disqus.com/embed.js';
+              
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>
+            Please enable JavaScript to view the 
+            <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                comments powered by Disqus.
+            </a>
+        </noscript>
+      {{/if}}
+
+      <footer class="Footer">
+        <div>&copy; {{siteMeta.title}} 2021</div>
         <div>&centerdot;</div>
-        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
-            rel="noopener noreferrer">Notablog</a>.
+        <div>Powered by <a href="https://juicing.cn" target="_blank"
+            rel="noopener noreferrer"> 商业内观 </a>.
         </div>
     </footer>
 </body>
