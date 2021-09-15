@@ -292,7 +292,7 @@
 @supports (not (backdrop-filter: blur(20px))) and
   (not (-webkit-backdrop-filter: blur(20px))) {
   .Navbar {
-    background-color: white;
+    background-color: rgba(193, 196, 216, 1);
   }
 }
 
