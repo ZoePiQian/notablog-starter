@@ -313,9 +313,9 @@ pre.Code code {
 }
 
 .Gallery__Item {
-  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 6px,
     rgba(15, 15, 15, 0.1) 0px 2px 4px;
-  border-radius: 5px;
+  border-radius: 7px;
   transition: background 120ms ease-in 0s;
   position: relative;
   /* 10:7 */
@@ -348,7 +348,7 @@ pre.Code code {
 } */
 
 .Gallery__Item__Cover {
-  box-shadow: rgba(55, 53, 47, 0.09) 0px -1px 0px 0px inset;
+  box-shadow: rgba(55, 53, 47, 0.09) 0px -1px 0px 7px inset;
   height: 200px;
   transition: var(--transition);
 }
