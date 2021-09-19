@@ -336,7 +336,6 @@ pre.Code code {
   -webkit-box-shadow: 0 0 10px rgba(255,255,255,.6), inset 0 0 10px rgba(255,255,255,1);
   -moz-box-shadow: 0 0 10px rgba(255,255,255,.6), inset 0 0 10px rgba(255,255,255,1);
   box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 10px rgba(255,255,255,1);
-  pointer-events: none !important;
 }
 
 .Gallery__Item > a {
@@ -375,7 +374,6 @@ pre.Code code {
   object-position: center 50%;
   padding-bottom: 1px;
   transition: var(--transition);
-  pointer-events: none !important;
 }
 
 .Gallery__Item__Cover--Contain > img {
