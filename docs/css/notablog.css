@@ -3,8 +3,8 @@
 .Navbar {
   display: flex;
   align-items: center;
-  font-size: 19px;
-  font-family: "PingFang SC",sans-serif;
+  font-size: 18px;
+  font-family: Verdana,Arial,sans-serif;
   position: fixed;
   top: 0;
   left: 0;

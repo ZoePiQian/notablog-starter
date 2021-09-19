@@ -159,7 +159,7 @@ border-radius: 15px;
 padding: 16px 16px 16px 12px;
 margin: 4px 0;
 background: var(--color-bg-gray-light);
-box-shadow: 2px 2px 6px #dadada, -1px -1px 6px #ffffff !important;
+box-shadow: 2px 2px 7px #dadada, -1px -1px 6px #ffffff !important;
 }
 
 .Callout__Icon {
@@ -306,24 +306,34 @@ pre.Code code {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-auto-rows: 1fr;
-  gap: 16px;
+  gap: 20px;
   border-top: 1px solid rgba(55, 53, 47, 0.16);
   padding-top: 16px;
-  padding-bottom: 4px;
+  padding-bottom: 10px;
 }
 
 .Gallery__Item {
-  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 6px,
+  border: 1px solid color(srgb 0.855 0.855 0.855);
+  box-shadow: rgba(15, 15, 15, 0.2) 7px 5px 6px,
     rgba(15, 15, 15, 0.1) 0px 2px 4px;
-  border-radius: 7px;
-  transition: background 120ms ease-in 0s;
+  border-radius: 5px;
   position: relative;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+   -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+   transition: all 1s ease;
   /* 10:7 */
   /* padding-top: 70%; */
 }
 
 .Gallery__Item:hover {
   background: rgba(55, 53, 47, 0.03);
+  border: 1px solid color(srgb 0.855 0.855 0.855);
+  transform: scale(1.03) !important; 
+  -webkit-box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
+  -moz-box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
+  box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
 }
 
 .Gallery__Item > a {
@@ -372,7 +382,6 @@ pre.Code code {
   padding: 8px 10px 6px;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: var(--transition);
 }
 
 .Gallery__Item__Title:after {
