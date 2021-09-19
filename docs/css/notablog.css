@@ -3,14 +3,14 @@
 .Navbar {
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 17px;
   font-family: Verdana,Arial,sans-serif;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
   width: 100%;
-  height: 50px;
+  height: 53px;
   padding: 10px 20px;
   /* Background blur stuff. */
   background-color: rgba(255, 255, 255, 0.7);
@@ -144,7 +144,7 @@
   margin-right: 10px;
   margin-bottom: 0.5rem;
   padding: 2px 6px;
-  font-weight: 400;
+  font-weight: 300;
   border-radius: 0.25rem;
 }
 
@@ -164,7 +164,7 @@
 }
 
 .DateTagBar__Tag--default {
-  background: rgba(206, 205, 202, 0.5);
+  background: rgba(206, 205, 202, 0);
 }
 
 .DateTagBar__Tag--gray {
@@ -176,7 +176,7 @@
 }
 
 .DateTagBar__Tag--orange {
-  background: rgba(245, 93, 0, 0.4);
+  background: rgba(197, 171, 82, 0.4);
 }
 
 .DateTagBar__Tag--yellow {
@@ -197,14 +197,16 @@
 
 .DateTagBar__Tag--pink {
   background: rgba(221, 0, 129, 0.4);
+  border: 1px color: rgba(97, 97, 97, 1);
 }
 
 .DateTagBar__Tag--red {
-  background: rgba(255, 0, 26, 0.2);
+  background: rgba(255, 0, 26, 0.4);
+  border: 1px color: rgba(97, 97, 97, 1);
 }
 
 .DateTagBar__Tag > a {
-  border: none;
+  border: 1px solid color: rgba(97, 97, 97, 0.889);
 }
 
 /* Article */

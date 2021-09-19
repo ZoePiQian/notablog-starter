@@ -155,7 +155,7 @@ p {
 
 .Callout {
 display: flex;
-border-radius: 15px;
+border-radius: 12px;
 padding: 16px 16px 16px 12px;
 margin: 4px 0;
 background: var(--color-bg-gray-light);
@@ -309,20 +309,22 @@ pre.Code code {
   gap: 20px;
   border-top: 1px solid rgba(55, 53, 47, 0.16);
   padding-top: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 .Gallery__Item {
   border: 1px solid color(srgb 0.855 0.855 0.855);
-  box-shadow: rgba(15, 15, 15, 0.2) 7px 5px 6px,
+  box-shadow: rgba(109, 107, 107, 0.2) 0px 3px 10px,
     rgba(15, 15, 15, 0.1) 0px 2px 4px;
   border-radius: 5px;
   position: relative;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-   -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-   transition: all 1s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+   -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+   transition: all 0.7s ease;
   /* 10:7 */
   /* padding-top: 70%; */
 }
@@ -331,9 +333,10 @@ pre.Code code {
   background: rgba(55, 53, 47, 0.03);
   border: 1px solid color(srgb 0.855 0.855 0.855);
   transform: scale(1.03) !important; 
-  -webkit-box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
-  -moz-box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
-  box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
+  -webkit-box-shadow: 0 0 10px rgba(255,255,255,.6), inset 0 0 10px rgba(255,255,255,1);
+  -moz-box-shadow: 0 0 10px rgba(255,255,255,.6), inset 0 0 10px rgba(255,255,255,1);
+  box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 10px rgba(255,255,255,1);
+  pointer-events: none !important;
 }
 
 .Gallery__Item > a {
@@ -372,6 +375,7 @@ pre.Code code {
   object-position: center 50%;
   padding-bottom: 1px;
   transition: var(--transition);
+  pointer-events: none !important;
 }
 
 .Gallery__Item__Cover--Contain > img {
@@ -815,6 +819,7 @@ pre.Code code {
 .Pill {
   padding: 0 6px;
   border-radius: 3px;
+  border:1px solid color(srgb 0.855 0.855 0.855);
   white-space: nowrap;
   display: inline-block;
   /* margin of inline-block does not collapse */
