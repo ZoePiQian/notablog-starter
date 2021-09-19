@@ -364,7 +364,6 @@ pre.Code code {
   box-shadow: rgba(55, 53, 47, 0.09) 0px -1px 0px 7px inset;
   height: 200px;
   transition: var(--transition);
-  pointer-events: none !important;
 }
 
 .Gallery__Item__Cover > img {
