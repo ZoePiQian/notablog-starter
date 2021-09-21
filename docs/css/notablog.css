@@ -5,7 +5,7 @@
   align-items: center;
   font-size: 17px;
   font-family: Verdana,Arial,sans-serif;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.04em;
   position: fixed;
   top: 0;
   left: 0;
@@ -139,6 +139,7 @@
   font-size: 0.85rem;
   display: flex;
   flex-wrap: wrap;
+  line-height: normal;
 }
 
 .DateTagBar__Item {
@@ -158,14 +159,14 @@
 
 .DateTagBar__Tag {
   color: hsla(45, 8%, 25%, 1);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-style: bold;
   font-weight: 500;
   white-space: nowrap;
 }
 
 .DateTagBar__Tag--default {
-  background: rgba(206, 205, 202, 0);
+  background: rgba(206, 205, 202, 0.3);
 }
 
 .DateTagBar__Tag--gray {
@@ -198,12 +199,10 @@
 
 .DateTagBar__Tag--pink {
   background: rgba(221, 0, 129, 0.4);
-  border: 1px color: rgba(97, 97, 97, 1);
 }
 
 .DateTagBar__Tag--red {
   background: rgba(255, 0, 26, 0.4);
-  border: 1px color: rgba(97, 97, 97, 1);
 }
 
 .DateTagBar__Tag > a {
@@ -223,9 +222,9 @@
 
 .Article__Title {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.9rem;
   line-height: 1.8;
-  font-size: 1.52rem;
+  font-size: 1.25rem;
   font-family:'Hiragino Sans GB','Source Sans Pro';
   font-weight: 600;
   letter-spacing: 0.05em;

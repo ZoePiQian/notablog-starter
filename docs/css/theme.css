@@ -818,7 +818,8 @@ pre.Code code {
 .Pill {
   padding: 1px 6px;
   border-radius: 3px;
-  border: 1px 1px 1px 1px solid rgb(122, 122, 122);
+  border: 1px solid grey;
+  line-height: normal;
   white-space: nowrap;
   display: inline-block;
   /* margin of inline-block does not collapse */
